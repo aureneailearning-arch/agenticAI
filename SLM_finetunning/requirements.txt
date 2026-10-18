@@ -1,0 +1,28 @@
+# Requirements for finetune_qwen25_claims_unsloth.ipynb
+# Python 3.10 - 3.12, NVIDIA GPU with CUDA (Linux or Windows WSL2)
+#
+# Install PyTorch with CUDA FIRST (pick the command for your CUDA version from https://pytorch.org), e.g.:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+# Then:
+#   pip install -r requirements.txt
+
+# Fine-tuning (Unsloth brings compatible versions of transformers, trl, peft,
+# accelerate, bitsandbytes, xformers and datasets)
+unsloth
+transformers
+trl
+peft
+accelerate
+bitsandbytes
+datasets
+
+# GGUF export (used by save_pretrained_gguf)
+sentencepiece
+protobuf
+gguf
+
+# Evaluation, charts and Ollama API calls
+scikit-learn
+matplotlib
+requests
+
