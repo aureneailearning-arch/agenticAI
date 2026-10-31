@@ -1,0 +1,4 @@
+Neo4j has an office in London.
+Google has offices in Bengaluru and Hyderabad.
+Alice works on the GraphRAG project. Bob works on the Gemini project.
+The GraphRAG project uses Gemini.

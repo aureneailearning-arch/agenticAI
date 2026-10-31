@@ -1,0 +1,3 @@
+Alice is a data engineer at Neo4j. Alice lives in London.
+Bob is a machine learning engineer at Google. Bob lives in Bengaluru.
+Alice and Bob both studied at IIT Hyderabad.

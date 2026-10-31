@@ -58,12 +58,13 @@ NEO4J_PASSWORD = "your_password_here"   # your Neo4j password
 GEMINI_MODEL = "gemini-3.6-flash"       # any free-tier Gemini model shown in AI Studio
 ```
 
-The notebook asks for your API key when it runs, so the key is never saved in the file.
-To skip the prompt, set it as an environment variable before starting Jupyter:
+Create a `.env` file next to the notebook from `.env.example` and add your Google AI Studio API key:
 
-```bash
-export GOOGLE_API_KEY="your-key"        # Windows: set GOOGLE_API_KEY=your-key
+```dotenv
+GOOGLE_API_KEY=your-google-ai-studio-api-key
 ```
+
+The notebook loads the key from `.env` using `python-dotenv`. Keep `.env` private; it is ignored by Git.
 
 ## Run it
 
@@ -108,3 +109,12 @@ MATCH (n) RETURN n
   For anything beyond a local demo, connect the query chain with a **read-only** Neo4j user.
 - This demo uses only the graph, no embeddings. A natural next step is hybrid retrieval:
   add a vector index on the `Document` (chunk) nodes and combine it with graph traversal.
+
+
+env example 
+
+GOOGLE_API_KEY=
+NEO4J_URI=neo4j://127.0.0.1:7687
+NEO4J_USERNAME=neo4j
+NEO4J_PASSWORD=Sample@123
+GEMINI_MODEL=gemini-3.5-flash-lite
